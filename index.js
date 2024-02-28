@@ -1,13 +1,36 @@
+// Write your algorithm here
+
 function hasTargetSum(array, target) {
-  // Write your algorithm here
-}
+   const complementsArith = new Set()
+   for (let num of array) {
+     if (complementsArith.has(num)) {
+       return true;
+     }
+     complementsArith.add(target - num)
+   }
+   return false
+} 
+
+
 
 /* 
   Write the Big O time complexity of your function here
+
+
+
+  
 */
 
 /* 
   Add your pseudocode here
+  1. create hasTargetSum function
+  2. create array and target parameter
+  3. step through array and for each index that we are on, we will run pair addition sequence onm the
+  rest of the list
+  4. if sum is equal to target then return true
+  5. if not true, keep running
+
+
 */
 
 /*
